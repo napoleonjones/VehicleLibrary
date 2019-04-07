@@ -11,14 +11,29 @@ namespace VehicleLibrary
         public string Model { get; set; }
 
         public int Year { get; set; }
-        public override int Accelerate(int desiredSpeed)
+
+        public Engine Engine { get; set; }
+
+        public Car()
         {
-            throw new NotImplementedException();
+            Engine = new Engine();
+        }
+        public override void Accelerate(int desiredSpeed)
+        {
+            for (var speed = CurrentSpeed; CurrentSpeed < desiredSpeed; speed++)
+            {
+                Engine.IncreaseRPM(speed + 10);
+                CurrentSpeed = speed;
+            }
         }
 
-        public override int Deccelerate(int desiredSpeed)
+        public override void Decelerate(int desiredSpeed)
         {
-            throw new NotImplementedException();
+            for (var speed = CurrentSpeed; CurrentSpeed > desiredSpeed; speed--)
+            {
+                Engine.DecreaseRPM(speed - 10);
+                CurrentSpeed = speed;
+            }
         }
     }
 }

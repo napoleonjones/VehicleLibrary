@@ -4,8 +4,8 @@ using System.Text;
 
 namespace VehicleLibrary.Interfaces
 {
-    public interface IDeccelerate
+    public interface IDecelerate
     {
-        int Deccelerate(int desiredSpeed);
+        void Decelerate(int desiredSpeed);
     }
 }

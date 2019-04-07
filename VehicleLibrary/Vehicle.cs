@@ -6,13 +6,13 @@ using VehicleLibrary.Interfaces;
 
 namespace VehicleLibrary
 {
-    public abstract class Vehicle : IAccelerate, IDeccelerate
+    public abstract class Vehicle : IAccelerate, IDecelerate
     {
         public int CurrentSpeed { get; set; }
 
         public int Passengers { get; set; }
 
-        public abstract int Accelerate(int desiredSpeed);
-        public abstract int Deccelerate(int desiredSpeed);
+        public abstract void Accelerate(int desiredSpeed);
+        public abstract void Decelerate(int desiredSpeed);
     }
 }

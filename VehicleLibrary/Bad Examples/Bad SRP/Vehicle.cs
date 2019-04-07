@@ -28,7 +28,12 @@ namespace VehicleLibrary.Bad_Examples.Bar_SRP
 
         public int Passengers { get; set; }
 
-        public void IncreaseSpeed(int desiredSpeed)
+        public Vehicle()
+        {
+
+        }
+
+        public void Accelerate(int desiredSpeed)
         {
             for (var speed = CurrentSpeed; speed < desiredSpeed; speed++)
             {
@@ -40,7 +45,7 @@ namespace VehicleLibrary.Bad_Examples.Bar_SRP
             }
         }
 
-        public void DecreaseSpeed(int desiredSpeed)
+        public void Decelerate(int desiredSpeed)
         {
             for (var speed = CurrentSpeed; speed > desiredSpeed; speed--)
             {

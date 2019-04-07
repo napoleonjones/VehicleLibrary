@@ -6,6 +6,6 @@ namespace VehicleLibrary.Interfaces
 {
     public interface IAccelerate
     {
-        int Accelerate(int desiredSpeed);
+        void Accelerate(int desiredSpeed);
     }
 }
